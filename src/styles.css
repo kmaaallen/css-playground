@@ -21,7 +21,7 @@ p {
 }
 
 .ears .left {
-    transform: skew(15deg) translate(-40px, 40px);
+    transform: skew(15deg) translate(-60px, 50px);
     border-radius: 30% 100% 40% 50%;
     height: 115px;
     width: 80px;
@@ -30,7 +30,7 @@ p {
 }
 
 .ears .right {
-    transform: skew(-15deg) translate(10px, 40px);
+    transform: skew(-15deg) translate(25px, 50px);
     border-radius: 100% 30% 50% 40%;
     height: 115px;
     width: 80px;
@@ -49,14 +49,28 @@ p {
     margin-top: 50px;
     display: flex;
     justify-content: center;
+    height: 15px;
+}
+
+.head .eyes .forehead {
+    position: relative;
+    z-index: 100;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 55px solid white;
+    transform: translateY(-30px);
 }
 
 .head .eyes .eye {
-    margin: 0px 20px;
+    margin: 0px 10px;
     height: 15px;
     width: 15px;
     border-radius: 50%;
     background-color: black;
+    animation: blink 6s infinite;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
 }
 
 .head .snout {
@@ -92,8 +106,8 @@ p {
     height: 40px;
     background-color: white;
     border-radius: 50%;
-    border: 1px solid #ccc;
-    z-index: 20;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
 }
 
 .head .snout .heart::before {
@@ -215,4 +229,50 @@ p {
     border-right: 80px solid transparent;
     border-top: 70px solid white;
     transform: translate(0px, 50px);
+}
+
+@keyframes blink {
+    from {
+        height: 15px;
+    }
+
+    5% {
+        height: 0px;
+    }
+
+    10% {
+        height: 15px;
+    }
+
+    15% {
+        height: 0px;
+    }
+
+    20% {
+        height: 15px;
+    }
+
+    45% {
+        height: 15px;
+    }
+
+    50% {
+        height: 0px;
+    }
+
+    55% {
+        height: 15px;
+    }
+
+    60% {
+        height: 0px;
+    }
+
+    65% {
+        height: 15px;
+    }
+
+    to {
+        height: 15px;
+    }
 }
