@@ -43,3 +43,25 @@
         height: 15px;
     }
 }
+
+@keyframes poke {
+    from {
+        height: 0px;
+    }
+
+    25% {
+        height: 10px;
+    }
+
+    50% {
+        height: 10px;
+    }
+
+    75% {
+        height: 10px;
+    }
+
+    to {
+        height: 0px;
+    }
+}
