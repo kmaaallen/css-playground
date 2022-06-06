@@ -1,354 +1,454 @@
 body {
-  background-color: black;
-  color: white;
-  display: flex;
-  flex-direction: row wrap;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row wrap;
 }
 
 .animal {
-  display: flex;
-  flex-direction: column;
-  padding: 30px;
-  min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    min-width: 300px;
 }
 
 .caption {
-  margin-top: 10px;
-  text-align: center;
+    margin-top: 10px;
+    text-align: center;
 }
 
 .dog {
-  width: 300px;
-  display: flex;
-  flex-direction: column;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
 }
+
 .dog .ears {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 280px;
-  margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 280px;
+    margin: auto;
 }
+
 .dog .ears .left {
-  transform: skew(15deg);
-  border-radius: 30% 100% 40% 50%;
-  height: 115px;
-  width: 80px;
-  background-color: orange;
+    transform: skew(15deg);
+    border-radius: 30% 100% 40% 50%;
+    height: 115px;
+    width: 80px;
+    background-color: orange;
 }
+
 .dog .ears .right {
-  transform: skew(-15deg);
-  border-radius: 100% 30% 50% 40%;
-  height: 115px;
-  width: 80px;
-  background-color: orange;
+    transform: skew(-15deg);
+    border-radius: 100% 30% 50% 40%;
+    height: 115px;
+    width: 80px;
+    background-color: orange;
 }
+
 .dog .head {
-  height: 140px;
-  width: 160px;
-  border-radius: 40% 40% 50% 50%;
-  background-color: orange;
-  margin: auto;
-  transform: translateY(-40px);
+    height: 140px;
+    width: 160px;
+    border-radius: 40% 40% 50% 50%;
+    background-color: orange;
+    margin: auto;
+    transform: translateY(-40px);
 }
+
 .dog .head .eyes {
-  display: flex;
-  justify-content: center;
-  height: 15px;
-  transform: translateY(40px);
+    display: flex;
+    justify-content: center;
+    height: 15px;
+    transform: translateY(40px);
 }
+
 .dog .head .eyes .forehead {
-  position: relative;
-  z-index: 100;
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 55px solid white;
-  transform: translateY(-15px);
+    position: relative;
+    z-index: 100;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 55px solid white;
+    transform: translateY(-15px);
 }
+
 .dog .head .eyes .eye {
-  margin: 0px 10px;
-  height: 15px;
-  width: 15px;
-  border-radius: 50%;
-  background-color: black;
-  animation: blink 6s infinite;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
+    margin: 0px 10px;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: black;
+    animation: blink 6s infinite;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
 }
+
 .dog .head .snout {
-  position: relative;
-  transform: rotate(180deg) translateY(-40px);
-  display: flex;
-  justify-content: center;
-  z-index: 20;
+    position: relative;
+    transform: rotate(180deg) translateY(-40px);
+    display: flex;
+    justify-content: center;
+    z-index: 20;
 }
+
 .dog .head .snout .nose {
-  position: relative;
-  background-color: black;
-  height: 20px;
-  width: 25px;
-  border-radius: 50%;
-  z-index: 30;
-  transform: rotate(135deg);
+    position: relative;
+    background-color: black;
+    height: 20px;
+    width: 25px;
+    border-radius: 50%;
+    z-index: 30;
+    transform: rotate(135deg);
 }
+
 .dog .head .snout .heart {
-  position: relative;
-  background-color: white;
-  width: 40px;
-  height: 40px;
-  transform: rotate(45deg);
+    position: relative;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    transform: rotate(45deg);
 }
+
 .dog .head .snout .heart::before {
-  position: absolute;
-  content: "";
-  width: 40px;
-  height: 40px;
-  background-color: white;
-  border-radius: 50%;
-  border-top: 1px solid #ccc;
-  border-left: 1px solid #ccc;
-  left: -25px;
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    left: -25px;
 }
+
 .dog .head .snout .heart::after {
-  position: absolute;
-  content: "";
-  width: 40px;
-  height: 40px;
-  background-color: white;
-  border-radius: 50%;
-  border-top: 1px solid #ccc;
-  border-left: 1px solid #ccc;
-  top: -25px;
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    top: -25px;
 }
+
 .dog .head .mouth {
-  position: absolute;
-  height: 40px;
-  width: 40px;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 50%;
-  transform: translate(60px, 30px);
-  z-index: 10;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    transform: translate(60px, 30px);
+    z-index: 10;
 }
+
 .dog .head .mouth .tongue {
-  position: relative;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  background-color: pink;
-  transform: translate(10px, 10px);
-  z-index: 12;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: pink;
+    transform: translate(10px, 10px);
+    z-index: 12;
 }
+
 .dog .head .beard-v {
-  position: relative;
-  transform: translate(20px, 0px);
-  width: 0;
-  height: 0;
-  border-left: 60px solid transparent;
-  border-right: 55px solid transparent;
-  border-top: 60px solid orange;
-  z-index: 9;
+    position: relative;
+    transform: translate(20px, 0px);
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 55px solid transparent;
+    border-top: 60px solid orange;
+    z-index: 9;
 }
+
 .dog .head .beard {
-  display: flex;
-  flex-direction: row;
-  transform: translateY(-50px);
-  justify-content: space-between;
-  position: relative;
+    display: flex;
+    flex-direction: row;
+    transform: translateY(-50px);
+    justify-content: space-between;
+    position: relative;
 }
+
 .dog .head .beard .beard-left {
-  border-radius: 50%;
-  transform: skew(35deg) translateX(15px);
-  height: 110px;
-  width: 40px;
-  background-color: white;
+    border-radius: 50%;
+    transform: skew(35deg) translateX(15px);
+    height: 110px;
+    width: 40px;
+    background-color: white;
 }
+
 .dog .head .beard .beard-right {
-  border-radius: 50%;
-  transform: skew(-35deg) translateX(-15px);
-  height: 110px;
-  width: 40px;
-  background-color: white;
+    border-radius: 50%;
+    transform: skew(-35deg) translateX(-15px);
+    height: 110px;
+    width: 40px;
+    background-color: white;
 }
+
 .dog .head .beard .beard-center {
-  position: absolute;
-  z-index: 150;
-  width: 0;
-  height: 0;
-  border-left: 90px solid transparent;
-  border-right: 90px solid transparent;
-  border-top: 50px solid orange;
-  transform: translate(-10px, 0px);
+    position: absolute;
+    z-index: 150;
+    width: 0;
+    height: 0;
+    border-left: 90px solid transparent;
+    border-right: 90px solid transparent;
+    border-top: 50px solid orange;
+    transform: translate(-10px, 0px);
 }
+
 .dog .head .beard .drop {
-  position: absolute;
-  border-top-color: white;
-  z-index: 100;
-  transform: translate(-10px, 10px);
+    position: absolute;
+    border-top-color: white;
+    z-index: 100;
+    transform: translate(-10px, 10px);
 }
+
 .dog .head .beard .beard-bottom {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
 }
+
 .dog .head .beard .beard-bottom .left {
-  position: relative;
-  border-left: 45px solid transparent;
-  border-right: 45px solid transparent;
-  border-top: 50px solid white;
-  z-index: 100;
-  transform: translate(-10px, 30px);
+    position: relative;
+    border-left: 45px solid transparent;
+    border-right: 45px solid transparent;
+    border-top: 50px solid white;
+    z-index: 100;
+    transform: translate(-10px, 30px);
 }
+
 .dog .head .beard .beard-bottom .right {
-  position: relative;
-  border-left: 45px solid transparent;
-  border-right: 45px solid transparent;
-  border-top: 50px solid white;
-  z-index: 100;
-  transform: translate(-10px, 30px);
+    position: relative;
+    border-left: 45px solid transparent;
+    border-right: 45px solid transparent;
+    border-top: 50px solid white;
+    z-index: 100;
+    transform: translate(-10px, 30px);
 }
+
 .dog .head .beard .beard-base {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
 }
+
 .dog .head .beard .beard-base .left {
-  position: relative;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-top: 30px solid white;
-  z-index: 100;
-  transform: translate(40px, 85px);
+    position: relative;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 30px solid white;
+    z-index: 100;
+    transform: translate(40px, 85px);
 }
+
 .dog .head .beard .beard-base .right {
-  position: relative;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-top: 30px solid white;
-  z-index: 100;
-  transform: translate(40px, 85px);
+    position: relative;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 30px solid white;
+    z-index: 100;
+    transform: translate(40px, 85px);
 }
+
 .dog .head .beard .bottom {
-  border-left: 80px solid transparent;
-  border-right: 80px solid transparent;
-  border-top: 70px solid white;
-  transform: translate(0px, 50px);
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-top: 70px solid white;
+    transform: translate(0px, 50px);
 }
 
 .cat .ears {
-  display: flex;
-  justify-content: space-between;
-  width: 200px;
-  margin: auto;
-  transform: translateY(40px);
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin: auto;
+    transform: translateY(40px);
 }
+
 .cat .ears .left,
 .cat .ears .right {
-  height: 70px;
-  width: 70px;
-  background-color: sienna;
+    height: 70px;
+    width: 70px;
+    background-color: grey;
 }
+
 .cat .ears .left {
-  transform: rotate(35deg);
-  border-radius: 10% 40% 10% 100%;
+    transform: rotate(35deg);
+    border-radius: 10% 40% 10% 100%;
 }
+
 .cat .ears .right {
-  transform: rotate(55deg);
-  border-radius: 10% 100% 10% 40%;
+    transform: rotate(55deg);
+    border-radius: 10% 100% 10% 40%;
 }
+
 .cat .head {
-  height: 140px;
-  width: 150px;
-  border-radius: 50% 50% 80% 80%;
-  background-color: sienna;
-  margin: auto;
+    height: 120px;
+    width: 150px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50% 80%;
+    border-bottom-right-radius: 50% 80%;
+    background-color: grey;
+    margin: auto;
 }
+
 .cat .head .eyes {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  width: 80px;
-  margin: auto;
-  transform: translateY(35px);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+    margin: auto;
+    transform: translateY(30px);
 }
-.cat .head .eyes .eye {
-  width: 20px;
-  height: 20px;
-  background-color: olive;
-  transform: rotate(45deg);
-  border-radius: 50% 10%;
-  border: 2px solid black;
-}
+
 .cat .head .eyes .eye .pupil {
-  height: 15px;
-  width: 15px;
-  background-color: black;
-  transform: rotate(90deg);
-  border-radius: 120% 10%;
-  margin: 2px 2px;
+    height: 16px;
+    width: 10px;
+    background-color: black;
+    border-radius: 50%;
+    border: 2px solid olive;
 }
+
+.cat .head .eyes .eye .dot {
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    background-color: white;
+    transform: translate(7px, 4px);
+}
+
 .cat .head .nose {
-  height: 50px;
-  width: 50px;
-  margin: auto;
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    width: 140px;
+    margin: auto;
 }
+
 .cat .head .nose .forehead {
-  position: relative;
-  margin: 0px auto;
-  z-index: 100;
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 55px solid white;
-  transform: translateY(-15px);
+    position: relative;
+    margin: 0px auto;
+    z-index: 100;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 55px solid white;
+    transform: translateY(-15px);
 }
-.cat .head .nose .boop {
-  position: relative;
-  z-index: 100;
-  width: 5px;
-  height: 5px;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 10px solid pink;
-  margin: 0px auto;
-  transform: translateY(-15px);
+
+.cat .head .nose .whiskers {
+    display: flex;
+    flex-direction: row;
+    width: 140px;
+    justify-content: center;
 }
-.cat .head .mouth .patch {
-  position: relative;
-  z-index: 10;
-  height: 80px;
-  width: 80px;
-  transform: rotate(45deg) translate(-15px, -15px);
-  border-radius: 50% 10%;
-  background-color: white;
-  margin: auto;
+
+.cat .head .nose .whiskers .boop {
+    position: relative;
+    z-index: 100;
+    width: 15px;
+    height: 10px;
+    background-color: pink;
+    border-radius: 30% 30% 50% 50%;
+    transform: translateY(-15px);
+    border: 2px solid palevioletred;
 }
-.cat .head .mouth .cheeks {
-  position: relative;
-  z-index: 50;
-  display: flex;
-  justify-content: center;
-  width: 80px;
-  transform: translate(35px, -90px);
+
+.cat .head .nose .whiskers .left {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-10px);
+    z-index: 300;
 }
-.cat .head .mouth .cheeks .cheek {
-  height: 40px;
-  width: 30px;
-  background-color: white;
-  border-radius: 50%;
-  border-bottom: black solid 3px;
+
+.cat .head .nose .whiskers .left .whisker {
+    margin-top: 3px;
+    z-index: 300;
+    background-color: black;
+    height: 2px;
+    width: 50px;
 }
-.cat .head .mouth .cheeks .left {
-  border-right: black solid 3px;
-  transform: skew(-15deg);
+
+.cat .head .nose .whiskers .left .top {
+    transform: rotate(10deg);
 }
-.cat .head .mouth .cheeks .right {
-  border-left: black solid 3px;
-  transform: skew(15deg);
+
+.cat .head .nose .whiskers .left .bottom {
+    transform: rotate(350deg);
+}
+
+.cat .head .nose .whiskers .right {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-10px);
+    z-index: 300;
+}
+
+.cat .head .nose .whiskers .right .whisker {
+    margin-top: 3px;
+    z-index: 300;
+    background-color: black;
+    height: 2px;
+    width: 50px;
+}
+
+.cat .head .nose .whiskers .right .top {
+    transform: rotate(350deg);
+}
+
+.cat .head .nose .whiskers .right .bottom {
+    transform: rotate(10deg);
+}
+
+.cat .head .cheeks .patch {
+    position: relative;
+    z-index: 10;
+    height: 70px;
+    width: 70px;
+    transform: rotate(45deg) translate(-20px, -20px);
+    border-radius: 50% 10%;
+    background-color: white;
+    margin: auto;
+}
+
+.cat .head .cheeks .line {
+    position: relative;
+    transform: translate(74px, -75px);
+    z-index: 20;
+    height: 20px;
+    width: 2px;
+    background-color: black;
+}
+
+.cat .head .cheeks .mouth {
+    position: relative;
+    transform: translate(64px, -80px);
+    z-index: 20;
+    height: 8px;
+    width: 23px;
+    border-radius: 20% 20% 50% 50%;
+    background-color: black;
+}
+
+.cat .head .cheeks .mouth .tongue {
+    background-color: palevioletred;
+    position: relative;
+    z-index: 30;
+    height: 10px;
+    width: 12px;
+    border-radius: 10% 10% 50% 50%;
+    margin: auto;
+    animation: poke 5s infinite linear;
 }
 
 /*# sourceMappingURL=styles.css.map */
